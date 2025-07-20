@@ -2,6 +2,7 @@ package actual_test;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import pages.GoogleSearchPageObjects;
 
@@ -13,8 +14,7 @@ public class GoogleSearchPageTest {
 	}
 	
 	public static void googleSearchTest() {
-		System.setProperty("webdriver.chrome.driver",
-				System.getProperty("user.dir") + "/resources/chromedriver");
+		WebDriverManager.chromedriver().clearDriverCache().setup();
 		chromeDriver = new ChromeDriver();
 		
 		chromeDriver.get("https://www.google.com/");

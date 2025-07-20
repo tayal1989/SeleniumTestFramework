@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import config.PropertiesFile;
 import pages.GoogleSearchPageObjects;
@@ -23,11 +24,10 @@ public class TestNGDemo {
 		PropertiesFile.getProperties();
 		
 		if(browserName.equalsIgnoreCase("chrome")) {
-//			System.setProperty("webdriver.chrome.driver", "/home/vishal/Vishal_Agarwal/E_Drive/Workspace_Eclipse_Java_Projects/Workspace/SeleniumFrameworkUdemy/drivers/chromedriver/chromedriver");
-			System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir") + "/resources/chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if(browserName.equalsIgnoreCase("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
 		

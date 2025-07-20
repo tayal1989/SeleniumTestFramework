@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import pages.GoogleSearchPageObjects;
 
@@ -14,7 +15,7 @@ public class TestNGDemo2 {
 	@BeforeTest
 	public void setUpTest() {
 		System.out.println("Before Test");
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/resources/chromedriver");
+		WebDriverManager.chromedriver().setup();
 		chromeDriver = new ChromeDriver();
 	}
 	

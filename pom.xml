@@ -2,11 +2,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>SeleniumTestNGLearning</groupId>
-	<artifactId>SeleniumTestNGLearning</artifactId>
+	<groupId>SeleniumTestFramework</groupId>
+	<artifactId>SeleniumTestFramework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SeleniumTestNGLearning</name>
-	<description>Learn Selenium TestNG from Udemy Lecture</description>
+	<name>SeleniumTestFramework</name>
+	<description>Comprehensive Selenium Test Automation Framework with TestNG and WebDriverManager</description>
 	
 	<properties>
 		<jre.level>17</jre.level>
@@ -132,6 +132,12 @@
 			<groupId>org.jacoco</groupId>
 			<artifactId>jacoco-maven-plugin</artifactId>
 			<version>0.8.10</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>5.9.2</version>
 		</dependency>
 		
 	</dependencies>
